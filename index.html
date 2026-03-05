@@ -50,20 +50,20 @@
   <!-- TODO: Replace with first author's Twitter handle -->
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
   <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
+  <meta name="twitter:title" content="Self Model for Embodied Artificial Intelligence">
   <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <meta name="twitter:description" content="This paper presents a systematic formulation of the Self Model for embodied artificial intelligence, proposing a unified computational framework that integrates body schema, forward and inverse models, perceptual memory, and agency.">
   <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:image" content="https://taoshida11.github.io/Selfmodel/static/images/self-model.png">
+  <meta name="twitter:image:alt" content="Self Model for Embodied Artificial Intelligence - Research Preview">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  <meta name="citation_title" content="Self Model for Embodied Artificial Intelligence">
+  <meta name="citation_author" content="Jiang, Shuqiang">
+  <meta name="citation_author" content="Zhang, Sixian">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Journal of Computer Science and Technology">
+  <meta name="citation_pdf_url" content="https://doi.org/10.1007/s11390-026-0000-0">
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -80,7 +80,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>Self Model for Embodied Artificial Intelligence - Shuqiang Jiang | Academic Research</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -250,18 +250,19 @@
             <h1 class="title is-1 publication-title">Self Model for Embodied Artificial Intelligence</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
+              <!-- 得把超链接删了 -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Shuqiang Jiang</a><sup>*</sup>,</span>
+                Shuqiang Jiang</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Sixian Zhang</a><sup>*</sup>,</span>
+                  Sixian Zhang</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Shida Tao</a>,</span>
+                    Shida Tao</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xihong Zhu</a>,</span>
+                    Xihong Zhu</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Tianliang Qi</a>,</span>
+                    Tianliang Qi</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xinhang Song</a><sup>‡</sup>
+                    Xinhang Song</a><sup>‡</sup>
                   </span>
                   </div>
 
@@ -329,25 +330,6 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -368,47 +350,281 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Overview Section (全宽，与摘要区分) -->
+<section class="section" style="background-color: #ffffff;">
+  <div class="container is-fluid">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" style="font-weight: bold;">Introduction</h2>
+        <div class="content has-text-justified" style="color: #000000">
+          <p>
+            Embodied artificial intelligence requires more than just environmental understanding—it demands that agents develop an internal awareness of their own bodies, capabilities, and decision processes. While existing approaches have explored isolated aspects of "self" such as perception, prediction, memory, or adaptation, they remain fragmented and lack a holistic computational foundation.
+          </p>
+          <p>
+            We introduce the Self Model, a unified internal representation that integrates four core self-related capabilities: self-perception (awareness of body and state), self-prediction (anticipation of action outcomes), self-memory (temporal continuity of experiences), and self-decision (goal-directed policy selection). This framework provides embodied agents with a coherent sense of self, enabling them to reason not only about the external world but also about themselves—their actions, limitations, and consequences.
+          </p>
+          <p>
+            Drawing inspiration from human self-awareness theories in cognitive science, our work establishes the conceptual foundation and technical pathway for building self-aware embodied systems that are more autonomous, adaptive, and capable of long-horizon reasoning in real-world environments.
+          </p>
+        </div>
+        <figure style="margin-top: 2rem; text-align: center;">
+          <img src="static/images/relatedwork.png" alt="Self Model framework diagram" style="max-width: 100%; height: auto;">
+          <figcaption style="margin-top: 0.5rem; font-style: italic; color: #555;">
+            Related work of self model. Existing studies address isolated components of the ``self'', including self-perception, self-prediction and self-decision and self-memory, yet these efforts remain fragmented and do not constitute a holistic self model.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Overview Section -->
 
-<!-- Image carousel -->
+<!-- Self Model Detailed Description -->
+<section class="section">
+  <div class="container is-fluid">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" style="font-weight: bold;">Self Model</h2>
+        <div class="content has-text-justified" style="color: #000000;">
+          <p>
+            In cognitive science, the human self model arises from five core mechanisms: 
+            <strong>body schema</strong> (spatial self‑representation), 
+            <strong>forward model</strong> (action outcome prediction), 
+            <strong>inverse model</strong> (goal‑to‑motor mapping), 
+            <strong>agency</strong> (self‑attribution of actions), and 
+            <strong>perceptual‑memory model</strong> (integration of experiences over time). 
+            These mechanisms collectively enable a coherent sense of self.
+          </p>
+          <p>
+            For embodied AI, we reorganize these biological foundations into four implementation‑oriented modules:<br>
+            &bull; <strong>Perception</strong> instantiates the body schema, providing real‑time awareness of joint states, morphology, and collision risks.<br>
+            &bull; <strong>Memory</strong> implements the perceptual‑memory model, constructing a 3D semantic self‑map that records the agent’s spatial and experiential history.<br>
+            &bull; <strong>Prediction</strong> operationalizes the forward model, using large language models to forecast action success and diagnose failures.<br>
+            &bull; <strong>Decision</strong> integrates the inverse model and agency, translating goals into executable actions while adapting strategies based on predicted outcomes and self‑identity.
+          </p>
+          <p>
+            These modules form a closed loop: perception feeds memory and prediction; prediction informs decision; execution feedback updates perception and memory. 
+            This perception–memory–prediction–decision cycle enables continuous self‑calibration, giving embodied agents a dynamic, adaptive sense of self that underpins robust autonomy in complex environments.
+          </p>
+        </div>
+        <!-- 新增图片及图注 -->
+        <figure style="margin-top: 2rem; text-align: center;">
+          <img src="static/images/self-model.png" alt="Self Model architecture diagram" style="max-width: 100%; height: auto;">
+          <figcaption style="margin-top: 0.5rem; font-style: italic; color: #555;">
+            This diagram illustrates how human self model mechanisms (e.g., body schema, agency) are instantiated as domain-adapted modules in embodied AI (e.g., perception integrating geometric parameter modeling, decision incorporating artificial identity), while preserving the core cognitive capability alignment  across biological and artificial systems.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Self Model Detailed Description -->
+
+<!-- Self Model Hierarchy -->
+<section class="section">
+  <div class="container is-fluid">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" style="font-weight: bold;">Self Model Hierarchy</h2>
+        <div class="content has-text-justified" style="color: #000000;">
+          <p>
+            To systematically characterize the developmental stages of self-awareness in embodied AI, we propose a six-level hierarchy (L0–L5):
+          </p>
+
+          <!-- 表格容器（水平滚动适配小屏） -->
+          <div style="overflow-x: auto; margin: 1.5rem 0;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+              <thead>
+                <!-- 第一行表头：L0-L5 -->
+                <tr style="background-color: #eaeef2;">
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle; width: 15%;"></th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">L0</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">L1</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">L2</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">L3</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">L4</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">L5</th>
+                </tr>
+                <!-- 第二行表头：各层级括号描述 -->
+                <tr style="background-color: #eaeef2;">
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;"></th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">(No Self Model)</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">(Basic Self-Awareness)</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">(Basic Self-Adaptation)</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">(Socialized Self)</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">(Sustained Self-Evolution)</th>
+                  <th style="padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;">(Full Self-Awareness)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Core Feature 行（浅灰背景） -->
+                <tr style="background-color: #f9f9f9;">
+                  <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Core Feature</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Stimulus-response</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Static physical self</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Dynamic self-env<br>coupling</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Multi-agent<br>and social-aware</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Value-Oriented<br>iteration</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Meaning construction</td>
+                </tr>
+                <!-- Memory 行 -->
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Memory</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">No self-related memory</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Short-term</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Multimodal episodic</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Social/role memory</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Autobiographical<br>and metacognitive</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Narrative social</td>
+                </tr>
+                <!-- Perception 行 -->
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Perception</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">No body model</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Static body</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Calibrated body</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Social-context self</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Self-monitoring</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Physio-cognitive<br>integration</td>
+                </tr>
+                <!-- Prediction 行 -->
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Prediction</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">No external prediction</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Context-bound</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Generalized causal</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Role/interaction</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Long-horizon<br>and counterfactual</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Worldview-level<br>long-term</td>
+                </tr>
+                <!-- Decision 行 -->
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">Decision</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Fixed preset actions</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Local heuristics</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Adaptive goal-action</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Role-conditioned</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Value-guided</td>
+                  <td style="padding: 10px; border: 1px solid #ccc; text-align: center;">Hierarchical and ethical</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            This hierarchy provides the first operational taxonomy for evaluating self-modeling capabilities across perception, memory, prediction, and decision, offering a unified benchmark for progress toward autonomous, self-aware embodied systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Self Model Hierarchy -->
+
+<!-- Instantiation and Results -->
+<section class="section">
+  <div class="container is-fluid">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" style="font-weight: bold;">Instantiation and Results</h2>
+        <div class="content has-text-justified" style="color: #000000;">
+          <p>
+            We instantiate an L1-level self model on a Stretch robot to validate its core components. The 
+            <strong>perception</strong> module computes real-time collision risk using a geometric body model 
+            and joint torque analysis. The <strong>memory</strong> module builds a 3D semantic voxel self-map that 
+            accumulates observations across episodes. The <strong>prediction</strong> module leverages a large 
+            language model to forecast grasp success and attribute failures. The <strong>decision</strong> module 
+            adapts actions based on predicted outcomes and an explicit self-identity (e.g., a "cleaner" role with 
+            task-specific priors).
+          </p>
+
+          <!-- 插入的图片及图注 -->
+          <figure style="margin-top: 2rem; margin-bottom: 2rem; text-align: center;">
+            <img src="static/images/Framework.png" alt="Framework of L1-level self model on Stretch robot" style="max-width: 100%; height: auto;">
+            <figcaption style="margin-top: 0.5rem; font-style: italic; color: #555; font-size: 0.9rem;">
+              Framework of a self model instantiation at Level L1.
+              For conceptual clarity, conceptual descriptions of Levels L0 and L2 are included in each component to contextualize the L1. In each module, dashed boxes denote the inputs associated with different aspects of the self. The thumbnail in the top-right corner shows alignment between the implementation and the self model definition.
+            </figcaption>
+          </figure>
+
+          <p>
+            Ablation studies were conducted on each module. Results show that self-perception significantly 
+            enhances obstacle avoidance, reducing collisions and human interventions. Self-memory substantially 
+            improves navigation performance within a single episode, with cross-episode map reuse yielding further 
+            gains. Introducing self-prediction optimizes manipulation success, while self-decision, by integrating 
+            identity information, effectively raises overall task completion.
+          </p>
+          <p>
+            Comparisons with methods such as <em>OVMM</em>, <em>OK-Robot</em>, and <em>ManipGen</em> demonstrate that 
+            our full L1 model achieves superior performance across stages including object finding, grasping, and 
+            placement. These results confirm that a unified self model significantly enhances an agent's autonomy 
+            and adaptability in real-world tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Instantiation and Results -->
+
+<!-- Video carousel - Ablation Demos -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <!-- 视频1: Self-perception ablation -->
+        <div class="item">
+          <div class="publication-video">
+            <video controls muted loop preload="metadata">
+              <source src="static/videos/Ablation_of_selfperception_demo_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Self-perception ablation demo
+          </h2>
+        </div>
+        <!-- 视频2: Self-memory ablation -->
+        <div class="item">
+          <div class="publication-video">
+            <video controls muted loop preload="metadata">
+              <source src="static/videos/Ablation_of_selfmemory_demo_2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Self-memory ablation demo
+          </h2>
+        </div>
+        <!-- 视频3: Self-prediction ablation -->
+        <div class="item">
+          <div class="publication-video">
+            <video controls muted loop preload="metadata">
+              <source src="static/videos/Ablation_of_selfprediciton_demo_3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Self-prediction ablation demo
+          </h2>
+        </div>
+        <!-- 视频4: Self-decision ablation -->
+        <div class="item">
+          <div class="publication-video">
+            <video controls muted loop preload="metadata">
+              <source src="static/videos/Ablation_of_selfdecision_demo_4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Self-decision ablation demo
+          </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
-
+<!-- End Video carousel - Ablation Demos -->
 
 
 
@@ -417,13 +633,13 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Long-Horizon Autonomous Cleaning Demonstration</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
             <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="static/videos/Selfmodel_Cleaner_demo_5.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -432,59 +648,6 @@
 </section>
 <!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 
@@ -498,12 +661,12 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@article{JCST2026,
+  title={Self Model for Embodied Artificial Intelligence} ,
+  author={Shuqiang Jiang, Sixian Zhang, Shida Tao, Xihong Zhu, Tianliang Qi, Xinhang Song},
+  journal={Journal of Computer Science and Technology},
+  year={2026},
+  url={https://doi.org/10.1007/s11390-026-0000-0}
 }</code></pre>
     </div>
 </section>
