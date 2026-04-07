@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="title" content="Self Model for Embodied AI - Concept & Papers">
+  <meta name="description" content="The Self Model provides a unified internal representation for embodied AI, integrating perception, memory, prediction, and decision.">
+  <meta name="keywords" content="Self Model, Embodied AI, Self-Awareness">
+  <meta name="author" content="Shuqiang Jiang, Sixian Zhang, Shida Tao, Xihong Zhu, Tianliang Qi, Xinhang Song">
+  <meta name="robots" content="index, follow">
+  
+  <title>Self Model for Embodied AI</title>
+  
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <style>
+    .paper-title-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .paper-title-link:hover {
+      text-decoration: underline;
+    }
+    .content p, .content li {
+      line-height: 1.6;
+    }
+    .figure-container {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .figure-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .figure-caption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+      font-size: 0.9rem;
+    }
+    /* 视频容器：居中，宽度由内部视频决定 */
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    .video-wrapper video {
+      width: 40%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    /* 响应式：小屏幕时宽度稍大 */
+    @media (max-width: 768px) {
+      .video-wrapper video {
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<main id="main-content">
+  <!-- 深蓝色总起段落 -->
+  <section class="hero is-primary is-bold" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+    <div class="hero-body">
+      <div class="container is-fluid">
+        <div class="columns is-centered">
+          <div class="column is-10 has-text-centered">
+            <h1 class="title is-1" style="font-weight: 800;">Self Model</h1>
+            <h2 class="subtitle is-4" style="color: #e0e0e0;">A Unified Framework for Embodied Artificial Intelligence</h2>
+            <div class="content" style="font-size: 1.2rem; max-width: 900px; margin: 2rem auto 0 auto;">
+              <p>
+                The Self Model provides an internal representation that enables an embodied agent to understand its own body, capabilities, memories, and decision processes. 
+                Inspired by cognitive science, we define four computational modules that form a closed loop for continuous self‑calibration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第一段：The Concept of Self: From Human to Agent -->
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h2 class="title is-3 has-text-centered" style="font-weight: 600;">The Concept of Self: From Human to Agent</h2>
+          <div class="content has-text-justified">
+            <p>
+              For humans, the concept of self is not only proof of one’s own existence but also the foundation of perception, thought, and emotion. 
+              Biologically, the core neural mechanisms of self include: 
+              <strong>body schema</strong> (dynamic representation of body geometry), 
+              <strong>forward model</strong> (predicting movement outcomes, mainly supported by the cerebellum), 
+              <strong>inverse model</strong> (converting goals into muscle commands via the motor cortex and basal ganglia), 
+              <strong>agency</strong> (attributing actions and their consequences to oneself), and 
+              <strong>perceptual‑memory model</strong> (integrating multisensory information and episodic memory via the hippocampus and prefrontal cortex). 
+              This unified, subjective framework is equally applicable and necessary in embodied AI. 
+              However, existing research mostly focuses on isolated components, lacking an integrated framework that fuses these functions, which prevents agents from achieving true autonomy, adaptation, and continuous learning.
+            </p>
+            <p>
+              Therefore, to replicate human-like self-awareness in robots, we start from four fundamental pillars: 
+              <strong>self-perception</strong> (awareness of one’s own morphology and state), 
+              <strong>self-prediction</strong> (anticipating action outcomes), 
+              <strong>self-memory</strong> (maintaining internal state continuity), and 
+              <strong>self-decision</strong> (selecting feasible, goal-directed actions based on self-identity). 
+              These pillars fill the gaps in current embodied capabilities, enabling robots not only to understand the external world but also to form a coherent internal representation of “themselves”.
+            </p>
+          </div>
+          <div class="figure-container">
+            <img src="static/images/human-self.png" alt="Human self mechanisms" style="max-width: 80%;">
+            <div class="figure-caption">
+              Internal representation of the self model in the human brain. The illustrated mechanisms offer biological inspiration for the design and construction of self model in embodied AI.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第二段：Self model in embodied AI -->
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h2 class="title is-3 has-text-centered" style="font-weight: 600;">Self model in embodied AI</h2>
+          <div class="content has-text-justified">
+            <p>
+              The Self Model is a unified internal representation that enables an embodied agent to understand its own body, capabilities, memories, and decision processes. 
+              It bridges perception, memory, prediction, and decision into a closed‑loop cognitive architecture, allowing the agent to reason not only about the external world but also about itself — its actions, limitations, and consequences.
+            </p>
+            <p><strong>Four core modules:</strong></p>
+            <ul>
+              <li><strong>Perception</strong> – Real‑time awareness of body state (joints, collisions, morphology).</li>
+              <li><strong>Memory</strong> – A 3D semantic self‑map that records spatial and experiential history.</li>
+              <li><strong>Prediction</strong> – Forecasting action outcomes (e.g., grasp success) and diagnosing failures.</li>
+              <li><strong>Decision</strong> – Goal‑to‑action mapping guided by self‑identity and predicted results.</li>
+            </ul>
+            <p>
+              These modules form a perception–memory–prediction–decision loop, enabling continuous self‑calibration and adaptive behavior in complex environments.
+            </p>
+          </div>
+          <div class="figure-container">
+            <img src="static/images/self-model.png" alt="Self Model architecture diagram">
+            <div class="figure-caption">
+              Self model establishes a functional mapping between the five core mechanisms of the human self model (left: body schema, forward model, inverse model, agency, perceptual-memory model) and the four modular components of the embodied AI self model (right: perception, prediction, decision, memory). 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第三段：The L0–L5 Hierarchy -->
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h2 class="title is-3 has-text-centered" style="font-weight: 600;">The L0–L5 Hierarchy</h2>
+          <div class="content has-text-justified">
+            <p>
+              To systematically evaluate self‑modeling capabilities, we propose a six‑level hierarchy (L0–L5) that characterizes developmental stages from non‑self‑representation to full self‑awareness.
+            </p>
+            <ul>
+              <li><strong>L0 – Non‑Self Model</strong>: Purely reactive, no self/non‑self distinction.</li>
+              <li><strong>L1 – Basic Self‑Awareness</strong>: Static physical self, short‑term memory, basic collision judgments.</li>
+              <li><strong>L2 – Basic Self‑Adaptation</strong>: Dynamic self‑environment coupling, generalized forward prediction.</li>
+              <li><strong>L3 – Socialized Self</strong>: Role‑aware behavior, social memory, recognition of others’ intentions.</li>
+              <li><strong>L4 – Sustained Self‑Evolution</strong>: Autobiographical memory, metacognitive monitoring, value‑oriented iteration.</li>
+              <li><strong>L5 – Full Self‑Awareness</strong>: Worldview and ethical reasoning, hierarchically organized decision‑making.</li>
+            </ul>
+            <p>
+              This hierarchy provides the first operational taxonomy for evaluating progress toward autonomous, self‑aware embodied systems.
+            </p>
+          </div>
+          <div class="figure-container">
+            <img src="static/images/levels.png" alt="L0-L5 hierarchy of self model">
+            <div class="figure-caption">
+              Overview of the six-level hierarchy of self model. The hierarchy spans from a non-self model to full self awareness, encompassing basic self cognition, basic self adaption, socialized self, and self evolution.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 承上启下段落：无灰底、左对齐，视频居中且宽度40% -->
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="content has-text-justified">
+            <p>
+              The paper <strong>“Self Model for Embodied Artificial Intelligence”</strong> presents the first systematic formulation of this framework, 
+              including a detailed L1 implementation and experimental validation. 
+              The video below demonstrates the robot with an L1-level self model performing a garbage cleaning task.
+              For the full technical details, please see the paper below.
+            </p>
+            <!-- 视频容器：居中，宽度40% -->
+            <div class="video-wrapper">
+              <video controls autoplay muted loop preload="metadata">
+                <source src="static/videos/Selfmodel_Cleaner_demo_5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 系列论文栏目 -->
+  <section class="section">
+    <div class="container is-fluid">
+      <h2 class="title is-2 has-text-centered" style="margin-bottom: 2rem;">📄 Series of Papers</h2>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="box" style="border-left: 4px solid #2a5298;">
+            <div style="display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+              <div style="flex-shrink: 0;">
+                <i class="fas fa-file-alt fa-2x has-text-primary"></i>
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <a href="origin.html" class="paper-title-link">
+                  <p class="title is-5" style="margin-bottom: 2rem; white-space: nowrap;">Self Model for Embodied Artificial Intelligence</p>
+                </a>
+                <p class="subtitle is-7" style="margin-bottom: 0.25rem; color: #4a4a4a; white-space: nowrap;">Shuqiang Jiang, Sixian Zhang, Shida Tao, Xihong Zhu, Tianliang Qi, Xinhang Song</p>
+                <p class="has-text-grey" style="margin-bottom: 0;">Journal of Computer Science and Technology, 2026</p>
+              </div>
+            </div>
+            <div class="content is-small has-text-grey" style="margin-top: 1rem;">
+              <strong>Abstract:</strong> This paper presents a systematic formulation of the Self Model for embodied AI... 
+              <a href="#abstract-full" id="show-abstract-link">(read full abstract)</a>
+              <div id="full-abstract" style="display: none; margin-top: 0.5rem;">
+                <p>This paper presents a systematic formulation of the Self Model for embodied artificial intelligence, aiming to provide the missing internal representation that enables an agent to understand its own body, capabilities, memories, and decision processes. Unlike existing approaches that address isolated aspects such as perception, prediction, or skill adaptation, we propose a unified computational framework that integrates body schema, forward and inverse models, perceptual memory mechanisms, and agency. This framework captures how an embodied agent represents its physical structure, predicts the consequences of its actions, selects policies, and accumulates experiences to form a coherent sense of self. We further introduce a six-level hierarchy (L0-L5) that characterizes the developmental stages of self model from non-self representation to full self awareness, providing the first operational taxonomy for evaluating self-awareness in embodied artificial intelligence systems. A practical implementation is developed and validated in manipulation and navigation tasks, demonstrating improved prediction, adaptation, memory, and decision-making capabilities. Overall, this work establishes the conceptual foundation and technical pathway for building self model in embodied intelligence. It highlights their significance for achieving autonomy, robustness, long-horizon reasoning, and lifelong evolution in real-world environments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 实验室介绍与联系邮箱 -->
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="content has-text-centered">
+            <p>
+              We are always open to discussions and collaborations. If you are interested in Self Model or related topics, 
+              please feel free to contact us at:
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i> <a href="mailto:xhsong@ict.ac.cn">sqjiang@ict.ac.cn</a> (Shuqiang Jiang)<br>
+              <i class="fas fa-envelope"></i> <a href="mailto:sqjiang@ict.ac.cn">sixian.zhang@vipl.ict.ac.cn</a> (Sixian Zhang)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('show-abstract-link')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    var fullAbs = document.getElementById('full-abstract');
+    if (fullAbs.style.display === 'none') {
+      fullAbs.style.display = 'block';
+      this.innerText = '(hide full abstract)';
+    } else {
+      fullAbs.style.display = 'none';
+      this.innerText = '(read full abstract)';
+    }
+  });
+</script>
+
+</body>
+</html>
