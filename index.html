@@ -13,7 +13,7 @@
   <title>Self Model for Embodied AI</title>
   
   <!-- <link rel="icon" type="image/x-icon" href=🌐> -->
-  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="static/images/internet.ico">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -100,21 +100,16 @@
           <div class="content has-text-justified">
             <p>
               For humans, the concept of self is not only proof of one’s own existence but also the foundation of perception, thought, and emotion. 
-              Biologically, the core neural mechanisms of self include: 
-              <strong>body schema</strong> (dynamic representation of body geometry), 
-              <strong>forward model</strong> (predicting movement outcomes, mainly supported by the cerebellum), 
-              <strong>inverse model</strong> (converting goals into muscle commands via the motor cortex and basal ganglia), 
-              <strong>agency</strong> (attributing actions and their consequences to oneself), and 
-              <strong>perceptual‑memory model</strong> (integrating multisensory information and episodic memory via the hippocampus and prefrontal cortex). 
+              Biologically, the core neural mechanisms of self include: <strong>body schema</strong> for structural representation of self, <strong>forward model</strong> for dynamical/causal prediction, <strong>inverse model</strong> that maps desired goals to control commands, <strong>mechanisms for agency</strong> that distinguish self from environment, and a <strong>perceptual‑memory model</strong> that tracks temporally extended self‑states and interaction histories.
               This unified, subjective framework is equally applicable and necessary in embodied AI. 
               However, existing research mostly focuses on isolated components, lacking an integrated framework that fuses these functions, which prevents agents from achieving true autonomy, adaptation, and continuous learning.
             </p>
             <p>
               Therefore, to replicate human-like self-awareness in robots, we start from four fundamental pillars: 
-              <strong>self-perception</strong> (awareness of one’s own morphology and state), 
+              <strong>self-perception</strong> (awareness of its own body and environment), 
               <strong>self-prediction</strong> (anticipating action outcomes), 
               <strong>self-memory</strong> (maintaining internal state continuity), and 
-              <strong>self-decision</strong> (selecting feasible, goal-directed actions based on self-identity). 
+              <strong>self-decision</strong> (selecting feasible and goal-directed actions). 
               These pillars fill the gaps in current embodied capabilities, enabling robots not only to understand the external world but also to form a coherent internal representation of “themselves”.
             </p>
           </div>
@@ -152,7 +147,7 @@
             </p>
           </div>
           <div class="figure-container">
-            <img src="static/images/self-model.png" alt="Self Model architecture diagram">
+            <img src="static/images/self-model.png" alt="Self Model architecture diagram" style="max-width:80%;">
             <div class="figure-caption">
               Self model establishes a functional mapping between the five core mechanisms of the human self model (left: body schema, forward model, inverse model, agency, perceptual-memory model) and the four modular components of the embodied AI self model (right: perception, prediction, decision, memory). 
             </div>
@@ -185,7 +180,7 @@
             </p>
           </div>
           <div class="figure-container">
-            <img src="static/images/levels.png" alt="L0-L5 hierarchy of self model">
+            <img src="static/images/levels.png" alt="L0-L5 hierarchy of self model" style="max-width:70%;">
             <div class="figure-caption">
               Overview of the six-level hierarchy of self model. The hierarchy spans from a non-self model to full self awareness, encompassing basic self cognition, basic self adaptation, socialized self, and self evolution.
             </div>
@@ -204,16 +199,8 @@
             <p>
               The paper <strong>“Self Model for Embodied Artificial Intelligence”</strong> presents a systematic formulation of this framework, 
               including a detailed L1 implementation and experimental validation. 
-              The video below demonstrates the robot with an L1-level self model performing a garbage cleaning task.
               For the full technical details, please see the paper below.
             </p>
-            <!-- 视频容器：居中，宽度40% -->
-            <div class="video-wrapper">
-              <video controls autoplay muted loop preload="metadata">
-                <source src="static/videos/Selfmodel_Cleaner_demo_5.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
           </div>
         </div>
       </div>

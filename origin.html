@@ -83,8 +83,8 @@
   <title>Self Model for Embodied Artificial Intelligence - Shuqiang Jiang | Academic Research</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/internet.ico">
+  <link rel="apple-touch-icon" href="static/images/internet.ico">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -289,37 +289,6 @@
                         <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
                 </a>
               </span>
             </div>
@@ -339,9 +308,8 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            This paper presents a systematic formulation of the Self Model for embodied artificial intelligence, aiming to provide the missing internal representation that enables an agent to understand its own body, capabilities, memories, and decision processes. Unlike existing approaches that address isolated aspects such as perception, prediction, or skill adaptation, we propose a unified computational framework that integrates body schema, forward and inverse models, perceptual memory mechanisms, and agency. This framework captures how an embodied agent represents its physical structure, predicts the consequences of its actions, selects policies, and accumulates experiences to form a coherent sense of self. 
-            We further introduce a six-level hierarchy (L0-L5) that characterizes the developmental stages of self model from non-self representation to full self awareness, providing a operational taxonomy for evaluating self-awareness in embodied artificial intelligence systems. A practical implementation is developed and validated in manipulation and navigation tasks, demonstrating improved prediction, perception, memory, and decision capabilities. 
-            Overall, this work establishes the conceptual foundation and technical pathway for building self model in embodied intelligence. It highlights their significance for achieving autonomy, robustness, long-horizon reasoning, and lifelong evolution in real-world environments.
+            To effectively adapt to the environment and interact with it, an embodied agent needs to understand not only the external environment but also its internal self. Inspired by the human cognition of self, we propose the self model for embodied AI. The self model refers to a computational framework, implemented through computational software, for the representation and modeling of various self-related aspects of an embodied agent, including self-body, self-capability, self-memory, self-actions and self-identity. The self model serves as a core component of embodied AI systems by integrating perception, prediction, memory, and decision modules, thereby enabling agents with diverse embodiments to perform various tasks such as manipulation, navigation, and question answering. Moreover, the self model enables the agent to continuously update and evolve during task execution. This report presents the definition, framework, and hierarchy of the self model, along with an instantiation on a real robot. 
+            Finally, we discuss future directions for the development of self model in embodied AI.
           </p>
         </div>
       </div>
@@ -368,7 +336,7 @@
           </p>
         </div>
         <figure style="margin-top: 2rem; text-align: center;">
-          <img src="static/images/relatedwork.png" alt="Self Model framework diagram" style="max-width: 100%; height: auto;">
+          <img src="static/images/relatedwork.png" alt="Self Model framework diagram" style="max-width: 80%; height: auto;">
           <figcaption style="margin-top: 0.5rem; font-style: italic; color: #555;">
             Related work of self model. Existing studies address isolated components of the ``self'', including self-perception, self-prediction and self-decision and self-memory, yet these efforts remain fragmented and do not constitute a holistic self model.
           </figcaption>
@@ -409,7 +377,7 @@
         </div>
         <!-- 新增图片及图注 -->
         <figure style="margin-top: 2rem; text-align: center;">
-          <img src="static/images/self-model.png" alt="Self Model architecture diagram" style="max-width: 100%; height: auto;">
+          <img src="static/images/self-model.png" alt="Self Model architecture diagram" style="max-width: 90%; height: auto;">
           <figcaption style="margin-top: 0.5rem; font-style: italic; color: #555;">
             This diagram illustrates how human self model mechanisms (e.g., body schema, agency) are instantiated as domain-adapted modules in embodied AI (e.g., perception integrating geometric parameter modeling, decision incorporating artificial identity), while preserving the core cognitive capability alignment  across biological and artificial systems.
           </figcaption>
@@ -540,7 +508,7 @@
 
           <!-- 插入的图片及图注 -->
           <figure style="margin-top: 2rem; margin-bottom: 2rem; text-align: center;">
-            <img src="static/images/Framework.png" alt="Framework of L1-level self model on Stretch robot" style="max-width: 100%; height: auto;">
+            <img src="static/images/Framework.png" alt="Framework of L1-level self model on Stretch robot" style="max-width: 80%; height: auto;">
             <figcaption style="margin-top: 0.5rem; font-style: italic; color: #555; font-size: 0.9rem;">
               Framework of a self model instantiation at Level L1.
               For conceptual clarity, conceptual descriptions of Levels L0 and L2 are included in each component to contextualize the L1. In each module, dashed boxes denote the inputs associated with different aspects of the self. The thumbnail in the top-right corner shows alignment between the implementation and the self model definition.
