@@ -47,11 +47,6 @@
       font-style: italic;
       color: #555;
       font-size: 0.9rem;
-      width: 50vw;          /* 占页面宽度的 50% */
-      max-width: 100%;      /* 小屏幕时避免溢出 */
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;   /* 注释通常居中，您也可以改为 left 或 justify */
     }
     /* 视频容器：居中，宽度由内部视频决定 */
     .video-wrapper {
@@ -65,27 +60,6 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
-    /* 让指定段落占页面宽度的 50% 并居中 */
-    .narrow-text {
-      width: 50vw;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: justify;    /* 对列表项文本也适用，但列表标记会保持左对齐，整体美观 */
-      padding-left: 1.5rem;     /* 保留列表缩进，避免贴边 */
-    }
-
-    
-   /* 确保列表和段落使用完全相同的左内边距 */
-    ul.narrow-text {
-      width: 50vw !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      padding-left: 1.5em !important;
-      list-style-position: outside !important;
-    }
-
     /* 响应式：小屏幕时宽度稍大 */
     @media (max-width: 768px) {
       .video-wrapper video {
@@ -120,15 +94,15 @@
     <div class="container is-fluid">
       <div class="columns is-centered">
         <div class="column is-10">
-          <h2 class="title is-3 has-text-centered" style="font-weight: 600";>The Concept of Self: From Human to Agent</h2>
+          <h2 class="title is-3 has-text-centered" style="font-weight: 600;">The Concept of Self: From Human to Agent</h2>
           <div class="content has-text-justified">
-            <p class="narrow-text">
+            <p>
               For humans, the concept of self is not only proof of one’s own existence but also the foundation of perception, thought, and emotion. 
               Biologically, the core neural mechanisms of self include: <strong>body schema</strong> for structural representation of self, <strong>forward model</strong> for dynamical/causal prediction, <strong>inverse model</strong> that maps desired goals to control commands, <strong>mechanisms for agency</strong> that distinguish self from environment, and a <strong>perceptual‑memory model</strong> that tracks temporally extended self‑states and interaction histories.
               This unified, subjective framework is equally applicable and necessary in embodied AI. 
               However, existing research mostly focuses on isolated components, lacking an integrated framework that fuses these functions, which prevents agents from achieving true autonomy, adaptation, and continuous learning.
             </p>
-            <p class="narrow-text">
+            <p>
               Therefore, to replicate human-like self-awareness in robots, we start from four fundamental pillars: 
               <strong>self-perception</strong> (awareness of its own body and environment), 
               <strong>self-prediction</strong> (anticipating action outcomes), 
@@ -155,18 +129,18 @@
         <div class="column is-10">
           <h2 class="title is-3 has-text-centered" style="font-weight: 600;">Self model in embodied AI</h2>
           <div class="content has-text-justified">
-            <p class="narrow-text">
+            <p>
               The Self Model is a unified internal representation that enables an embodied agent to understand its own body, capabilities, memories, and decision processes. 
               It bridges perception, memory, prediction, and decision into a closed‑loop cognitive architecture, allowing the agent to reason not only about the external world but also about itself — its actions, limitations, and consequences.
             </p>
-            <p class="narrow-text"><strong>Four core modules:</strong></p>
-            <ul class="narrow-text">
+            <p><strong>Four core modules:</strong></p>
+            <ul>
               <li><strong>Perception</strong> – Real‑time awareness of body state (joints, collisions, morphology).</li>
               <li><strong>Memory</strong> – A 3D semantic self‑map that records spatial and experiential history.</li>
               <li><strong>Prediction</strong> – Forecasting action outcomes (e.g., grasp success) and diagnosing failures.</li>
               <li><strong>Decision</strong> – Goal‑to‑action mapping guided by self‑identity and predicted results.</li>
             </ul>
-            <p class="narrow-text">
+            <p>
               These modules form a perception–memory–prediction–decision loop, enabling continuous self‑calibration and adaptive behavior in complex environments.
             </p>
           </div>
@@ -188,10 +162,10 @@
         <div class="column is-10">
           <h2 class="title is-3 has-text-centered" style="font-weight: 600;">The L0–L5 Hierarchy</h2>
           <div class="content has-text-justified">
-            <p class="narrow-text">
+            <p>
               To systematically evaluate self‑modeling capabilities, we propose a six‑level hierarchy (L0–L5) that characterizes developmental stages from non‑self‑representation to full self‑awareness.
             </p>
-            <ul class="narrow-text">
+            <ul>
               <li><strong>L0 – Non‑Self Model</strong>: Purely reactive, no self/non‑self distinction.</li>
               <li><strong>L1 – Basic Self‑Awareness</strong>: Static physical self, short‑term memory, basic collision judgments.</li>
               <li><strong>L2 – Basic Self‑Adaptation</strong>: Dynamic self‑environment coupling, generalized forward prediction.</li>
@@ -199,7 +173,7 @@
               <li><strong>L4 – Sustained Self‑Evolution</strong>: Autobiographical memory, metacognitive monitoring, value‑oriented iteration.</li>
               <li><strong>L5 – Full Self‑Awareness</strong>: Worldview and ethical reasoning, hierarchically organized decision‑making.</li>
             </ul>
-            <p class="narrow-text">
+            <p>
               This hierarchy provides an operational taxonomy for evaluating progress toward autonomous, self‑aware embodied systems.
             </p>
           </div>
@@ -220,7 +194,7 @@
       <div class="columns is-centered">
         <div class="column is-10">
           <div class="content has-text-justified">
-            <p class="narrow-text">
+            <p>
               The paper <strong>“Self Model for Embodied Artificial Intelligence”</strong> presents a systematic formulation of this framework, 
               including a detailed L1 implementation and experimental validation. 
               For the full technical details, please see the paper below.
@@ -254,7 +228,7 @@
               <strong>Abstract:</strong> This paper presents a systematic formulation of the Self Model for embodied AI... 
               <a href="#abstract-full" id="show-abstract-link">(read full abstract)</a>
               <div id="full-abstract" style="display: none; margin-top: 0.5rem;">
-                <p class="narrow-text">This paper presents a systematic formulation of the Self Model for embodied artificial intelligence, aiming to provide the missing internal representation that enables an agent to understand its own body, capabilities, memories, and decision processes. Unlike existing approaches that address isolated aspects such as perception, prediction, or skill adaptation, we propose a unified computational framework that integrates body schema, forward and inverse models, perceptual memory mechanisms, and agency. This framework captures how an embodied agent represents its physical structure, predicts the consequences of its actions, selects policies, and accumulates experiences to form a coherent sense of self. We further introduce a six-level hierarchy (L0-L5) that characterizes the developmental stages of self model from non-self representation to full self awareness, providing an operational taxonomy for evaluating self-awareness in embodied artificial intelligence systems. A practical implementation is developed and validated in manipulation and navigation tasks, demonstrating improved prediction, adaptation, memory, and decision-making capabilities. Overall, this work establishes the conceptual foundation and technical pathway for building self model in embodied intelligence. It highlights their significance for achieving autonomy, robustness, long-horizon reasoning, and lifelong evolution in real-world environments.</p>
+                <p>This paper presents a systematic formulation of the Self Model for embodied artificial intelligence, aiming to provide the missing internal representation that enables an agent to understand its own body, capabilities, memories, and decision processes. Unlike existing approaches that address isolated aspects such as perception, prediction, or skill adaptation, we propose a unified computational framework that integrates body schema, forward and inverse models, perceptual memory mechanisms, and agency. This framework captures how an embodied agent represents its physical structure, predicts the consequences of its actions, selects policies, and accumulates experiences to form a coherent sense of self. We further introduce a six-level hierarchy (L0-L5) that characterizes the developmental stages of self model from non-self representation to full self awareness, providing an operational taxonomy for evaluating self-awareness in embodied artificial intelligence systems. A practical implementation is developed and validated in manipulation and navigation tasks, demonstrating improved prediction, adaptation, memory, and decision-making capabilities. Overall, this work establishes the conceptual foundation and technical pathway for building self model in embodied intelligence. It highlights their significance for achieving autonomy, robustness, long-horizon reasoning, and lifelong evolution in real-world environments.</p>
               </div>
             </div>
           </div>
